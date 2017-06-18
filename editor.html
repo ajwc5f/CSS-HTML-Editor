@@ -2,130 +2,37 @@
 <!DOCTYPE html>
 
 <html>
-<head>
-	<title>CSS/HTML Editor</title>
-	<style>
-		#textWrapper {
-			width: 100%;
-			padding: 5px;
-			margin: auto;
-			float: left;
-		}
-
-		#left {
-			width: auto;
-			min-height: 600px;
-			margin: 0px 5px 0px 0px;
-			float: left;
-		}
-
-		#previewPane {
-			border: 2px dotted gray;
-			min-height: 600px;
-			width: 800px;
-			margin: 0px 0px 0px 5px;
-			padding: 10px;
-			float: left;
-		}
-
-		#cssEditor {
-			width: 400px;
-			min-height: 300px;
-			margin-bottom: 5px;
-		}
-
-		#htmlEditor {
-			width: 400px;
-			min-height: 300px;
-			margin-top: 5px;
-		}
-
-		#buttons {
-			float: left;
-			width: 400px;
-		}
-
-		button {
-			width: 130px;
-			height: 30px;
-		}
-
-		.group:before,
-			.group:after {
-				content: "";
-				display: table;
-			}
-			.group:after {
-				clear:both
-			}
-			.group {
-				zoom: 1;
-			}
-
-	</style>
-
-	<style id="previewPaneCSS"></style>
-
-	<script>
-
-		var  index = 0;
-
-		function toggleCSS() {
-			index++;
-			var cssObject = document.getElementById('cssEditor');
-			var previewPaneStyleObject = document.getElementById('previewPaneCSS');
-
-			if (index%2 == 1) {
-				previewPaneStyleObject.innerHTML = cssObject.value;
-			}
-			else if (index%2 == 0) {
-				previewPaneStyleObject.innerHTML = null;
-			}
-		}
-
-		function launchHTML() {
-			var htmlObject = document.getElementById('htmlEditor');
-			var previewPaneObject = document.getElementById('previewPane');
-
-			previewPaneObject.innerHTML = htmlObject.value;
-		}
-
-		function clearCode() {
-			var htmlObject = document.getElementById('htmlEditor');
-			var previewPaneObject = document.getElementById('previewPane');
-			var cssObject = document.getElementById('cssEditor');
-
-			cssObject.value = null;
-			htmlObject.value = null;
-			previewPaneObject.innerHTML = null;
-		}
-
-	</script>
+	<head>
+		<title>CSS/HTML Editor</title>
 	
-</head>
-<body>
-	<div id="textWrapper">
-		<div id="left">
-			<form action="#" method="GET">
-				<!-- Textarea -->
-				<textarea id="cssEditor" name="editor" placeholder="CSS..."></textarea>	
-			</form>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="script.js"></script>
 
-			<form action="#" method="GET">
-				<!-- Textarea -->
-				<textarea id="htmlEditor" name="editor" placeholder="HTML..."></textarea>
-			</form>
+		<style id="previewPaneCSS"></style>
+	</head>
+	
+	<body>
+		<div id="textWrapper">
+			<div id="left">
+				<form action="#" method="GET">
+					<!-- Textarea -->
+					<textarea id="cssEditor" name="editor" placeholder="CSS..."></textarea>	
+				</form>
+
+				<form action="#" method="GET">
+					<!-- Textarea -->
+					<textarea id="htmlEditor" name="editor" placeholder="HTML..."></textarea>
+				</form>
+			</div>
+	
+			<div id="previewPane"></div>
+
 		</div>
-	
-		<div id="previewPane"></div>
 
-	</div>
-
-	<div id="buttons">
-		<button type="button" onclick="launchHTML()">Launch</button>
-		<button type="button" onclick="clearCode()">Clear</button>
-		<button type="button" onclick="toggleCSS()">Toggle</button>
-	</div>
-		
-</body>        
+		<div id="buttons">
+			<button type="button" onclick="launchHTML()">Launch</button>
+			<button type="button" onclick="clearCode()">Clear</button>
+			<button type="button" onclick="toggleCSS()">Toggle</button>
+		</div>	
+	</body>        
 </html>
