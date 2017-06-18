@@ -1,56 +1,57 @@
-		#textWrapper {
-			width: 100%;
-			padding: 5px;
-			margin: auto;
-			float: left;
-		}
+#textWrapper {
+	width: 100%;
+	padding: 5px;
+	margin: auto;
+	float: left;
+}
 
-		#left {
-			width: auto;
-			min-height: 600px;
-			margin: 0px 5px 0px 0px;
-			float: left;
-		}
+#left {
+	width: auto;
+	min-height: 600px;
+	margin: 0px 5px 0px 0px;
+	float: left;
+}
 
-		#previewPane {
-			border: 2px dotted gray;
-			min-height: 600px;
-			width: 800px;
-			margin: 0px 0px 0px 5px;
-			padding: 10px;
-			float: left;
-		}
+#previewPane {
+	border: 2px dotted gray;
+	min-height: 600px;
+	width: 800px;
+	margin: 0px 0px 0px 5px;
+	padding: 10px;
+	float: left;
+}
 
-		#cssEditor {
-			width: 400px;
-			min-height: 300px;
-			margin-bottom: 5px;
-		}
+#cssEditor {
+	width: 400px;
+	min-height: 300px;
+	margin-bottom: 5px;
+}
 
-		#htmlEditor {
-			width: 400px;
-			min-height: 300px;
-			margin-top: 5px;
-		}
+#htmlEditor {
+	width: 400px;
+	min-height: 300px;
+	margin-top: 5px;
+}
 
-		#buttons {
-			float: left;
-			width: 400px;
-		}
+#buttons {
+	float: left;
+	width: 400px;
+	margin: 0px 5px 0px 0px;
+}
 
-		button {
-			width: 130px;
-			height: 30px;
-		}
+button {
+	width: 130px;
+	height: 30px;
+}
 
-		.group:before,
-			.group:after {
-				content: "";
-				display: table;
-			}
-			.group:after {
-				clear:both
-			}
-			.group {
-				zoom: 1;
-			}
+.group:before,
+.group:after {
+	content: "";
+	display: table;
+}
+.group:after {
+	clear:both
+}
+.group {
+	zoom: 1;
+}
